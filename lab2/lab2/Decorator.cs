@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
+    // определяет интерфейс для объектов
     abstract class Human
     {
         public string Name { get; protected set; }
@@ -16,6 +17,7 @@ namespace lab2
         public abstract string GetWeather();
     }
 
+    // ConcreteComponent - определят объект, на который возлагаются дополнительные обязанности
     class Englishmen: Human
     {
         public Englishmen() : base("англичанин")
@@ -38,6 +40,8 @@ namespace lab2
         }   
     }
 
+    //Decorator – хранит ссылку на объект IComponent и определяет интерфейс,
+    //соответствующий интерфейсу IComponent
     abstract class HumanDecorator : Human
     {
         protected Human human;
@@ -47,6 +51,7 @@ namespace lab2
         }
     }
 
+    //ConcreteDecorator – возлагает дополнительные обязанности на компонент.
     class UmbrellaHuman : HumanDecorator
     {
         public UmbrellaHuman(Human human) : base(human.Name + " с зонтиком", human)

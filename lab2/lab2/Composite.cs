@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace lab2
 {
+    //поведение, общее для всех примитивныхи составных объектов
     public interface IComponent
     {
         string Title { get; set; }
@@ -26,6 +27,8 @@ namespace lab2
         }
     }
 
+    // Composite хранит компоненты-потомки
+    //абстрактного типа IComponent, каждый из которых может бытьтакже Composite.
     public class Map : IComponent
     {
         private readonly List<IComponent> _map = new List<IComponent>();
