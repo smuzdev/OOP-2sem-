@@ -1,0 +1,6 @@
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\bin\Debug\lab3.exe.config
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\bin\Debug\lab3.exe
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\bin\Debug\lab3.pdb
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\obj\Debug\lab3.csprojAssemblyReference.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\obj\Debug\lab3.exe
+D:\BSTU\2sem\СТПМС\Лабораторные\lab3\lab3\obj\Debug\lab3.pdb
