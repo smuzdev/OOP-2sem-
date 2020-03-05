@@ -1,0 +1,10 @@
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\bin\Debug\lab4.exe.config
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\bin\Debug\lab4.exe
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\bin\Debug\lab4.pdb
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.csprojAssemblyReference.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.Form1.resources
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.Properties.Resources.resources
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.csproj.GenerateResource.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.exe
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.pdb
+D:\BSTU\2sem\СТПМС\Лабораторные\lab4\lab4\obj\Debug\lab4.Form2.resources
