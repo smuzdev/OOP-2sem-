@@ -97,9 +97,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(12, 219);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 22);
+            this.label2.Size = new System.Drawing.Size(154, 22);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Тип ортировки:";
+            this.label2.Text = "Тип cортировки:";
             // 
             // button3
             // 
