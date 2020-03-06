@@ -39,8 +39,17 @@ namespace lab4
                     textBox1.Text = b.ToString();
                     break;
                 case 4:
-                    b = a / float.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
+                    float divider = float.Parse(textBox1.Text);
+                    if (divider != 0.0)
+                    {
+                        b = a / float.Parse(textBox1.Text);
+                        textBox1.Text = b.ToString();
+                    }
+                    else
+                    {
+                        textBox1.Clear();
+                        textBox1.Text = textBox1.Text + "Деление на 0";
+                    }    
                     break;
 
                 default:
@@ -101,38 +110,50 @@ namespace lab4
 
         private void button20_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            count = 1;
-            label1.Text = a.ToString() + "+";
-            sign = true;
+            if (textBox1.Text != "")
+            {
+                a = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 1;
+                label1.Text = a.ToString() + "+";
+                sign = true;
+            }
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            count = 2;
-            label1.Text = a.ToString() + "-";
-            sign = true;
+            if (textBox1.Text != "")
+            {
+                a = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 2;
+                label1.Text = a.ToString() + "-";
+                sign = true;
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            count = 3;
-            label1.Text = a.ToString() + "*";
-            sign = true;
+            if (textBox1.Text != "")
+            {
+                a = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 3;
+                label1.Text = a.ToString() + "*";
+                sign = true;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            count = 4;
-            label1.Text = a.ToString() + "/";
-            sign = true;
+            if (textBox1.Text != "")
+            {
+                a = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                count = 4;
+                label1.Text = a.ToString() + "/";
+                sign = true;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -181,7 +202,10 @@ namespace lab4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + ",";
-        }
+            if (textBox1.Text.IndexOf(",") == -1)
+            {
+                textBox1.Text += ",";
+            }
+        }  
     }
 }

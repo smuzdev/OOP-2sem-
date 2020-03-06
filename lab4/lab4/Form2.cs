@@ -95,8 +95,8 @@ namespace lab4
                 }
                 else
                 {
-                    Car st = new Car();
-                    collection.Sort(0, collection.Count, st);
+                    Car car = new Car();
+                    collection.Sort(0, collection.Count, car);
                     foreach (Car c in collection)
                     {
                         listBox2.Items.Add(c.brand + " , " + c.year + " год ");
