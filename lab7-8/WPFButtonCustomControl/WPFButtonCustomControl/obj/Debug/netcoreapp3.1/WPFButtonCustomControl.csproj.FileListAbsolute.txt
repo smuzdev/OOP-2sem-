@@ -1,0 +1,13 @@
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\bin\Debug\netcoreapp3.1\WPFButtonCustomControl.deps.json
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\bin\Debug\netcoreapp3.1\WPFButtonCustomControl.dll
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\bin\Debug\netcoreapp3.1\WPFButtonCustomControl.pdb
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.csprojAssemblyReference.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl_MarkupCompile.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl_MarkupCompile.lref
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\Themes\Generic.baml
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.g.resources
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.AssemblyInfoInputs.cache
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.AssemblyInfo.cs
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.dll
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\WPFButtonCustomControl\WPFButtonCustomControl\obj\Debug\netcoreapp3.1\WPFButtonCustomControl.pdb

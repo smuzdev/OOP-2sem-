@@ -138,6 +138,9 @@
   <data name="isDoneCheckBox" xml:space="preserve">
     <value>Done</value>
   </data>
+  <data name="redoButton" xml:space="preserve">
+    <value>Redo</value>
+  </data>
   <data name="saveButton" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -149,5 +152,8 @@
   </data>
   <data name="todoDescrioption" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="undoButton" xml:space="preserve">
+    <value>Undo</value>
   </data>
 </root>

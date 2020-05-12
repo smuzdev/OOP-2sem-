@@ -124,6 +124,15 @@ namespace lab7_8.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отменить.
+        /// </summary>
+        internal static string redoButton {
+            get {
+                return ResourceManager.GetString("redoButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Сохранить.
         /// </summary>
         internal static string saveButton {
@@ -156,6 +165,15 @@ namespace lab7_8.Properties {
         internal static string todoDescription {
             get {
                 return ResourceManager.GetString("todoDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Повторить.
+        /// </summary>
+        internal static string undoButton {
+            get {
+                return ResourceManager.GetString("undoButton", resourceCulture);
             }
         }
     }

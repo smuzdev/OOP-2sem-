@@ -4,17 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab7_8"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         xmlns:lex="http://wpflocalizeextension.codeplex.com" 
         lex:LocalizeDictionary.DesignCulture="en"
         lex:ResxLocalizationProvider.DefaultAssembly="lab7-8"    
         lex:ResxLocalizationProvider.DefaultDictionary="Resources"
-        Title="{lex:Loc Title}" Height="500" Width="1100" Loaded="Window_Loaded" Icon="ToDoIcon.png">
+        Title="{lex:Loc Title}" Height="500" Width="1100" Loaded="Window_Loaded" Icon="ToDoIcon.png"
+        Style="{DynamicResource WindowStyle}">
 
-    <Window.Background>
-        <ImageBrush ImageSource="/Images/Background.jpg" Stretch="Fill" />
-    </Window.Background>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -31,7 +29,7 @@
             <ColumnDefinition Width="58*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#1fc6e6" Grid.Row="0" Grid.Column="0" Margin="0,0,245,103" Grid.RowSpan="2" Grid.ColumnSpan="2">
+        <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,245,103" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -42,10 +40,10 @@
                 <ColumnDefinition Width="90*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="currentDateTextBlock" Grid.RowSpan="2" TextAlignment="Center" VerticalAlignment="Top" FontSize="60" Foreground="White" Height="70" Margin="5,13,97,0" FontFamily="./Resources/#Akrobat Bold" Grid.ColumnSpan="2" Text="22" />
+            <TextBlock x:Name="currentDateTextBlock" Grid.RowSpan="2" TextAlignment="Center" VerticalAlignment="Top" FontSize="60" Foreground="White" Height="70" Margin="-4,20,101,0" FontFamily="./Resources/#Akrobat Bold" Grid.ColumnSpan="2" Text="22" />
             <TextBlock x:Name="currentDayTextBlock" Grid.Column="1" TextAlignment="Left" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="22" Margin="24,20,-27,0">Среда</TextBlock>
             <TextBlock x:Name="currentMonthTextBlock" Grid.Column="1" TextAlignment="Left" VerticalAlignment="Top" FontSize="16" Foreground="White" Height="24" Margin="24,38,-33,0" Grid.RowSpan="2">Апрель, 2020</TextBlock>
-            <TextBlock x:Name="currenTimeTextBlock" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Top" FontSize="16" TextAlignment="Center" Margin="22,10,-23,0" RenderTransformOrigin="0.36,0.585" Grid.Row="1" >01:32:00</TextBlock>
+            <TextBlock x:Name="currenTimeTextBlock" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" VerticalAlignment="Top" FontSize="16" TextAlignment="Center" Margin="16,10,-17,0" RenderTransformOrigin="0.36,0.585" Grid.Row="1" >01:32:00</TextBlock>
 
         </Grid>
 
@@ -126,7 +124,8 @@
                 Grid.Row="0"
                 Grid.Column="3"
                 Background="#00cc00"
-                VerticalAlignment="Center" Width="50" Margin="4,22,4,21"/>
+                Style="{DynamicResource lock}"
+                VerticalAlignment="Center" Height="30" Width="50" Margin="4,22,4,21"/>
 
         <Button Click="save_Click"
                 Content="{lex:Loc saveButton}"
@@ -134,10 +133,10 @@
                 HorizontalAlignment="Center"
                 Grid.Row="3"
                 Grid.Column="2"
-                Background="#ffa000"
+                Style="{DynamicResource SaveButtonStyle}"
                 VerticalAlignment="Center" Width="100" Margin="55,29,302,28"/>
 
-        <TextBox x:Name="SearachField" Background="White" Height="30" Width="120"
+        <TextBox x:Name="SearchField" Style="{DynamicResource SearchField}" Height="30" Width="120"
                 Grid.Column="1" Margin="26,36,125,7"/>
 
         <Button Click="search_Click"
@@ -145,7 +144,7 @@
                 x:Name="search"
                 HorizontalAlignment="Center"
                 Grid.Column="1"
-                Background="#00cc00"
+                Style="{DynamicResource searchButton}"
                 VerticalAlignment="Center" Width="100" Margin="151,36,20,7" />
 
         <Button Click="clear_Click"
@@ -153,17 +152,30 @@
                 x:Name="clear"
                 HorizontalAlignment="Center"
                 Grid.Column="1"
-                Background="#ff0000"
+                Style="{DynamicResource clearButton}"
                 VerticalAlignment="Center" Width="100" Grid.ColumnSpan="2" Margin="256,36,418,7" />
 
         <Button Click="button1_Click_ChangeLanguageToRussian"
                 x:Name="button1"
                 Content="RU"
                 HorizontalAlignment="Center"
+                Style="{DynamicResource lock}"
                 Grid.Row="0"
                 Grid.Column="4"
-                 Background="#00cc00"
-                VerticalAlignment="Center" Width="50" Margin="4,22,4,21"/>
+                Background="#00cc00"
+                VerticalAlignment="Center" Width="50" Height="30" Margin="4,22,4,21"/>
+        <CheckBox x:Name="lockEn" Content="Деактивировать" Foreground="White" FontFamily="roboto" FontSize="14" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"/>
+        <ComboBox x:Name="styleBox" Grid.Column="2" Height="30" Width="100" VerticalAlignment="Center" Style="{DynamicResource ComboBoxFlatStyle}" HorizontalAlignment="Left" Margin="90 30 0 0" Background="#ffffff"/>
+        <StackPanel Grid.Row="3" VerticalAlignment="Center" Margin="10 0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 0 0 10">
+                <Button x:Name="unButton" Style="{DynamicResource doButton}" Height="30" Width="120" Content="{lex:Loc undoButton}" Click="buttonUndoClick" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <materialDesign:PackIcon Kind="Undo" Width="30" Height="30" Margin="5" Foreground="#ffffff"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <Button x:Name="redoButton" Style="{DynamicResource doButton}" Height="30" Width="120" Content="{lex:Loc redoButton}" Click="buttonRedoClick" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <materialDesign:PackIcon Kind="Redo" Width="30" Height="30" Margin="5" Foreground="#ffffff"/>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Window>

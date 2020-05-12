@@ -30,3 +30,8 @@ D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\lab7_8.
 D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\bin\Debug\en-US\lab7-8.resources.dll
 D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\lab7_8.Properties.Resources.en-US.resources
 D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\en-US\lab7-8.resources.dll
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\Styles\Dark.baml
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\Styles\Light.baml
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\obj\Debug\Styles\ComboBoxStyle.baml
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\bin\Debug\MyButton.dll
+D:\BSTU\2sem\СТПМС\Лабораторные\lab7-8\lab7-8\bin\Debug\MyButton.pdb

@@ -138,6 +138,9 @@
   <data name="isDoneCheckBox" xml:space="preserve">
     <value>Выполено</value>
   </data>
+  <data name="redoButton" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
   <data name="saveButton" xml:space="preserve">
     <value>Сохранить</value>
   </data>
@@ -149,5 +152,8 @@
   </data>
   <data name="todoDescription" xml:space="preserve">
     <value>Описание</value>
+  </data>
+  <data name="undoButton" xml:space="preserve">
+    <value>Повторить</value>
   </data>
 </root>

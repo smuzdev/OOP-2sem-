@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab7_8.Services
+namespace lab7_8
 {
     class FileIOService
     {
@@ -43,6 +43,6 @@ namespace lab7_8.Services
                 writer.Write(output);
             }
         }
-
+    
     }
 }

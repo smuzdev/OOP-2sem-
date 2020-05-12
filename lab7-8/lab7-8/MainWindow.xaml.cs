@@ -1,11 +1,11 @@
 ﻿using lab7_8.Models;
-using lab7_8.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +27,8 @@ namespace lab7_8
         private ObservableCollection<ToDoModel> _todoDataList;
         private ObservableCollection<ToDoModel> _todoDataListSearch;
         private ObservableCollection<ToDoModel> _todoDataListTemp;
+        private Stack<ObservableCollection<ToDoModel>> _todoDataListStackReDo = new Stack<ObservableCollection<ToDoModel>>();
+        private Stack<ObservableCollection<ToDoModel>> _todoDataListStackUnDo = new Stack<ObservableCollection<ToDoModel>>();
         private FileIOService _fileIOService;
 
         ObservableCollection<string> todoCategory { get; set; } = new ObservableCollection<string>() { "Дом", "Работа", "Универ" };
@@ -43,6 +45,7 @@ namespace lab7_8
             _fileIOService = new FileIOService(PATH);
             try
             {
+
                 _todoDataList = _fileIOService.LoadData();
             }
             catch (Exception ex)
@@ -50,6 +53,7 @@ namespace lab7_8
                 MessageBox.Show(ex.Message);
                 Close();
             }
+
 
             this.DataContext = this;
             ComboBoxCategory.ItemsSource = todoCategory;
@@ -72,6 +76,11 @@ namespace lab7_8
             var stream = Application.GetResourceStream(uri).Stream;
             var cursor = new Cursor(stream);
             Cursor = cursor;
+
+            List<string> styles = new List<string> { "Light", "Dark" };
+            styleBox.SelectionChanged += ThemeChange;
+            styleBox.ItemsSource = styles;
+            styleBox.SelectedItem = "Light";
         }
 
         public ObservableCollection<ToDoModel> TodoDataList
@@ -95,6 +104,7 @@ namespace lab7_8
         {
             try
             {
+                _todoDataListStackReDo.Push(new ObservableCollection<ToDoModel>(_fileIOService.LoadData()));
                 _fileIOService.SaveData(TodoDataList);
             }
             catch (Exception ex)
@@ -102,6 +112,7 @@ namespace lab7_8
                 MessageBox.Show(ex.Message);
                 Close();
             }
+
         }
 
         // Languages
@@ -119,9 +130,9 @@ namespace lab7_8
 
         private void search_Click(object sender, RoutedEventArgs e)
         {
-            string temp = SearachField.Text;
+            string temp = SearchField.Text;
             _todoDataListSearch = new ObservableCollection<ToDoModel>();
-            _todoDataListTemp = new ObservableCollection<ToDoModel>(_todoDataList);
+
             foreach (var item in TodoDataList)
             {
                 if (item.ToDoDescription == temp)
@@ -134,8 +145,44 @@ namespace lab7_8
         
         private void clear_Click(object sender, RoutedEventArgs e)
         {
-            SearachField.Text = null;
-            TodoDataList = _todoDataListTemp;
+            SearchField.Text = null;
+        }
+
+        private void ThemeChange(object sender, SelectionChangedEventArgs e)
+        {
+            string style = styleBox.SelectedItem as string;
+            // определяем путь к файлу ресурсов
+            var uri = new Uri("/Styles/" + style + ".xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // очищаем коллекцию ресурсов приложения
+            Application.Current.Resources.Clear();
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+        }
+
+
+        private void buttonRedoClick(object sender, RoutedEventArgs e)
+        {
+            dgToDoList.ItemsSource = null;
+
+            _todoDataListTemp = _todoDataList;
+
+            _todoDataList = _todoDataListStackReDo.Pop();
+
+            _todoDataListStackUnDo.Push(_todoDataListTemp);
+
+            dgToDoList.ItemsSource = _todoDataList;
+            _fileIOService.SaveData(TodoDataList);
+        }
+
+        private void buttonUndoClick(object sender, RoutedEventArgs e)
+        {
+            dgToDoList.ItemsSource = null;
+            _todoDataListStackReDo.Push(_todoDataList);
+            _todoDataList = _todoDataListStackUnDo.Pop(); 
+            dgToDoList.ItemsSource = _todoDataList;
+            _fileIOService.SaveData(TodoDataList);
         }
     }
 }
